@@ -11,16 +11,8 @@ const app = Vue.createApp({
 
     methods: {
         handleClick() {
-            this.x += 1
-            if (this.x == 0) {
-                return {
-                    output: 1
-                }
-            } else {
-                return {
-                    output: this.x
-                }
-            }
+                this.x += 1;
+                this.output = this.x;
         }
     }
     
