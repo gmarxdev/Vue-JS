@@ -1,1 +1,3 @@
-console.log("My Name is Gielo Mar, I am Practicing Vue!")
+const app = Vue.createApp()
+
+app.mount('#app')
