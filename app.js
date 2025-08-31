@@ -11,8 +11,12 @@ const app = Vue.createApp({
 
     methods: {
         addClick() {
-                this.x += 1;
-                this.output = this.x;
+            this.x += 1;
+            this.output = this.x;
+        },
+        subClick() {
+            this.x -= 1;
+            this.output = this.x;
         }
     }
     
