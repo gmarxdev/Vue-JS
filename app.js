@@ -4,19 +4,22 @@ const app = Vue.createApp({
     data() {
         return {
             call: "call me ehe",
-            x: 0
+            x: 0,
+            output: 0
         }
     },
 
-    handleClick() {
-        this.x += 1
-        if (this.x == 0) {
-            return {
-                output: 1
-            }
-        } else {
-            return {
-                output: this.x
+    methods: {
+        handleClick() {
+            this.x += 1
+            if (this.x == 0) {
+                return {
+                    output: 1
+                }
+            } else {
+                return {
+                    output: this.x
+                }
             }
         }
     }
