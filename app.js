@@ -3,7 +3,15 @@ const app = Vue.createApp({
     // template: "<h2>NIce VUe JS!</h2>"
     data() {
         return {
-            call: "call me ehe"
+            call: "call me ehe",
+            x: 0
+        }
+    },
+
+    handleClick() {
+        this.x += 1
+        return {
+            output: this.x
         }
     }
     
