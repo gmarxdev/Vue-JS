@@ -4,19 +4,16 @@ const app = Vue.createApp({
     data() {
         return {
             call: "call me ehe",
-            x: 0,
             output: 0
         }
     },
 
     methods: {
         addClick() {
-            this.x += 1;
-            this.output = this.x;
+            this.output += 1;
         },
         subClick() {
-            this.x -= 1;
-            this.output = this.x;
+            this.output -= 1;
         }
     }
     
