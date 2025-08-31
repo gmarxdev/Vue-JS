@@ -10,7 +10,7 @@ const app = Vue.createApp({
     },
 
     methods: {
-        handleClick() {
+        addClick() {
                 this.x += 1;
                 this.output = this.x;
         }
