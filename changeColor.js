@@ -3,7 +3,7 @@ const app = Vue.createApp({
 
     data() {
         return {
-            btnColor = 'blue'
+            btnColor: 'blue'
         }
     },
     methods: {
