@@ -20,7 +20,8 @@
         </div>
 
         <button @click="btnToggle">
-            <span>Toggle</span>
+            <span v-if="btnToggle">Show Toggle</span>
+            <span v-if="!btnToggle">Hide Toggle</span>
         </button>
 
 
