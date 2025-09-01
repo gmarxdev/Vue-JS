@@ -16,6 +16,10 @@ const app = Vue.createApp({
         },
         subClick() {
             this.output -= 1;
+        },
+
+        btnToggle() {
+            this.toggle = this.toggle === 'true' ? 'false' : 'true';
         }
 
     }
