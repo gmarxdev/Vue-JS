@@ -19,7 +19,7 @@ const app = Vue.createApp({
         },
 
         btnToggle() {
-            this.toggle = this.toggle === 'true' ? 'false' : 'true';
+            this.toggle = !this.toggle;
         }
 
     }
