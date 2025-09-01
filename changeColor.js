@@ -7,7 +7,7 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        changeColor() {
+        btnCLick() {
             this.btnText = this.btnText === 'Click Me' ? 'Click Me Again' : 'Again Click!';
         }
     }
