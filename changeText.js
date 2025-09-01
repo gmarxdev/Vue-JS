@@ -1,4 +1,4 @@
-const app = Vue.createApp({
+const app2 = Vue.createApp({
 
 
     data() {
@@ -7,11 +7,11 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        btnCLick() {
+        btnClick() {
             this.btnText = this.btnText === 'Click Me' ? 'Click Me Again' : 'Again Click!';
         }
     }
     
 })
 
-app.mount('#changeColor')
+app2.mount('#changeText')
