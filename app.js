@@ -4,9 +4,9 @@ const app = Vue.createApp({
     data() {
         return {
             call: "call me ehe",
-            output: 0
+            output: 0,
             
-            toggle
+            toggle: true
         }
     },
 
