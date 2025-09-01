@@ -3,12 +3,12 @@ const app = Vue.createApp({
 
     data() {
         return {
-            btnColor: 'blue'
+            btnText: 'Click Me'
         }
     },
     methods: {
         changeColor() {
-            this.btnColor = this.btnColor === 'blue' ? 'red' : 'blue';
+            this.btnText = this.btnText === 'Click Me' ? 'Click Me Again' : 'Again Click!';
         }
     }
     
