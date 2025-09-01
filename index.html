@@ -12,10 +12,16 @@
     <h1>My name is Gielo Mar</h1>
 
     <div class="" id="app">
-        <h3>NIce VUe JS! {{ call }}</h3>
-        <h4>{{ output }}</h4>
-        <button v-on:click="addClick">+</button>
-        <button v-on:click="subClick">-</button>
+        <div v-if="toggle">
+            <h3>NIce VUe JS! {{ call }}</h3>
+            <h4>{{ output }}</h4>
+            <button v-on:click="addClick">+</button>
+            <button v-on:click="subClick">-</button>
+        </div>
+
+        <button @click="btnToggle">
+            <span>Toggle</span>
+        </button>
 
 
         <!-- <button v-on:click="output++">+</button>

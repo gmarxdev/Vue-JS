@@ -5,6 +5,8 @@ const app = Vue.createApp({
         return {
             call: "call me ehe",
             output: 0
+            
+            toggle
         }
     },
 
@@ -15,6 +17,7 @@ const app = Vue.createApp({
         subClick() {
             this.output -= 1;
         }
+
     }
     
 })
