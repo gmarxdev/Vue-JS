@@ -9,7 +9,7 @@ const app = Vue.createApp({
 
         }
     },
-    method: {
+    methods: {
         btnToggle() {
             this.toggle = !this.toggle;
         }

@@ -10,13 +10,15 @@
     <h1>PART 2 - VUE PRACTICE</h1>
     <div class="" id="app">
         <div class="" v-if="toggle">
-            <p>{{ Book.title }} {{ Book.title }}</p>
+            <p>Book Title: {{ Book[0].title }} | Book Author: {{ Book[0].author }}</p>
         </div>
+
         <button @click="btnToggle">
-            <span>TOGGLE</span>
+            <span v-if="toggle">HIDE</span>
+            <span v-if="!toggle">SHOW</span>
         </button>
     </div>
     
-
+<script src="app.js"></script>
 </body>
 </html>
