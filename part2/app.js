@@ -2,9 +2,12 @@ const app = Vue.createApp({
 
     data() {
         return {
+            url: "https://github.com/gmarxdev",
             toggle: true,
-            Book: [
-                { title: "The Habit Loop", author: "Charles Duhigg" }
+            books: [
+                { title: "The Habit Loop", author: "Charles Duhigg" },
+                { title: "The Habit Loop", author: "Charles Duhigg" },
+                { title: "The Habit Loop", author: "Charles Duhigg" },
             ]
 
         }

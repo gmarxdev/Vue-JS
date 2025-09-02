@@ -9,8 +9,18 @@
 <body>
     <h1>PART 2 - VUE PRACTICE</h1>
     <div class="" id="app">
+
+        <!-- ATTRIBUTE BINDING -->
+        <a v-bind:href="url">MY PORTFOLIO</a>
+        <!-- <a :href="url">MY PORTFOLIO</a> same --> 
+
         <div class="" v-if="toggle">
-            <p>Book Title: {{ Book[0].title }} | Book Author: {{ Book[0].author }}</p>
+            <ul>
+                <li v-for="book in books">
+                    <p>Book Title: {{ book.title }} | Book Author: {{ book.author }}</p>
+                </li>
+            </ul>
+            
         </div>
 
         <button @click="btnToggle">
