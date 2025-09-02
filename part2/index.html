@@ -7,10 +7,14 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    
+    <h1>PART 2 - VUE PRACTICE</h1>
     <div class="" id="app">
-        
+        <div class="" v-if="toggle">
+            <p>{{ Book.title }} {{ Book.title }}</p>
+        </div>
+        <button @click="btnToggle">TOGGLE</button>
     </div>
+    
 
 </body>
 </html>
