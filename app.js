@@ -22,8 +22,11 @@ const app = Vue.createApp({
             this.toggle = !this.toggle;
         },
 
-        handleEvent() {
-            alert("Goods!")
+        handleEvent(e, data) {
+            console.log(e, e.type)
+            if (data) {
+                console.log(data)
+            }
         }
 
     }
