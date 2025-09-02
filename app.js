@@ -6,7 +6,10 @@ const app = Vue.createApp({
             call: "call me ehe",
             output: 0,
             
-            toggle: true
+            toggle: true,
+
+            x: 0,
+            y: 0,
         }
     },
 
@@ -27,6 +30,11 @@ const app = Vue.createApp({
             if (data) {
                 console.log(data)
             }
+        },
+
+        handleMousemove(e) {
+            this.x = e.offsetX
+            this.y = e.offsetY
         }
 
     }
