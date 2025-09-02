@@ -20,6 +20,10 @@ const app = Vue.createApp({
 
         btnToggle() {
             this.toggle = !this.toggle;
+        },
+
+        handleEvent() {
+            alert("Goods!")
         }
 
     }
