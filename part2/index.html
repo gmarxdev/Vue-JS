@@ -17,7 +17,10 @@
         <div class="" v-if="toggle">
             <ul>
                 <li v-for="book in books">
-                    <p>Book Title: {{ book.title }} | Book Author: {{ book.author }}</p>
+                    <img :src="book.img" alt="book.title" width="100">
+                    <h2>Book Title: {{ book.title }}</h2>
+                    <p>Book Author: {{ book.author }}</p>
+                    <br>
                 </li>
             </ul>
             
