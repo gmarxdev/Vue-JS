@@ -8,13 +8,16 @@ const app = Vue.createApp({
                 { title: 'The Habit Loop', author: 'Charles Duhigg', img: 'assets/my-photo.jpg', isFav: true },
                 { title: 'The Habit Loop', author: 'Charles Duhigg', img: 'assets/my-photo.jpg', isFav: false },
                 { title: 'NO EXCUSES!', author: 'Tracey', img: 'assets/my-photo.jpg', isFav: true },
-            ]
-
+            ],
+            liToggle: true
         }
     },
     methods: {
         btnToggle() {
             this.toggle = !this.toggle;
+        },
+        li_Toggle(book) {
+            book.isFav = !this.liToggle;
         }
     }
 

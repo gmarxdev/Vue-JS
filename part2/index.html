@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue - Part 2</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+        li.fav {
+            background-color: lightgreen;
+        }
+    </style>
+
 </head>
 <body>
     <h1>PART 2 - VUE PRACTICE</h1>
@@ -16,11 +23,11 @@
 
         <div class="" v-if="toggle">
             <ul>
-                <li v-for="book in books">
+                <li v-for="book in books" :class="{ fav: book.isFav }" @click="li_Toggle(book)" v-if="liToggle">
                     <img :src="book.img" alt="book.title" width="100">
                     <h2>Book Title: {{ book.title }}</h2>
                     <p>Book Author: {{ book.author }}</p>
-                    <p>Book Author: {{ book.isFav }}</p>
+                    <!-- <p>Book Author: {{ book.isFav }}</p> -->
                     <br>
                 </li>
             </ul>
