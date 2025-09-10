@@ -3,6 +3,10 @@
     <h1>Hi I am Gielo Mar Bandoy</h1>
     <hr>
     <h5>An aspiring Software Engineer</h5>
+
+    <button @click="addCounter(counter++)">
+      {{ counter }}
+    </button>
   </div>
 </template>
 
