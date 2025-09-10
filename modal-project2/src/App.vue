@@ -1,14 +1,15 @@
 <template>
   <h1>{{ msg }}</h1>
+  <Modal />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Modal from "./components/Modal.vue"
 
 export default {
   name: 'App',
   components: {
-    
+    Modal
   },
   data() {
     return {
