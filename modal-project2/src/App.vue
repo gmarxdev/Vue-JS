@@ -1,6 +1,8 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <Modal />
+  <div>
+    <h1>{{ msg }}</h1>
+    <Modal />
+  </div>
 </template>
 
 <script>

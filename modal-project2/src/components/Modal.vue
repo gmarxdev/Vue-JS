@@ -16,7 +16,7 @@
         margin: 100px auto;
         background: white;
         border-radius: 20px;
-    },
+    }
     .backdrop {
         top: 0;
         position: fixed;
