@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <Modal />
+    <Modal header="Sign Up for a Discount! HAHAHAHA"/>
   </div>
 </template>
 
