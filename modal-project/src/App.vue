@@ -4,7 +4,7 @@
     <hr>
     <h5>An aspiring Software Engineer</h5>
 
-    <button @click="addCounter(counter++)">
+    <button @click="addCounter()">
       {{ counter }}
     </button>
   </div>
@@ -17,6 +17,16 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      counter: 0
+    }
+  },
+  methods: {
+    addCounter() {
+      this.counter += 1
+    }
   }
 }
 </script>
@@ -30,4 +40,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+button {
+  padding: 10px;
+  font-size: 20px;
+}
+
 </style>
