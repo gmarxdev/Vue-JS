@@ -3,18 +3,18 @@ import Header from './components/Header.vue'
 </script>
 
 <template>
-
-    <Header/>
+  <div>
+    <Header />
 
     <main>
-      
+        <!-- ✅ This is where your pages (Login.vue, Register.vue) will be shown -->
+        <RouterView />
     </main>
-
+  </div>
 </template>
 
 <style scoped>
-
-@media (min-width: 1024px) {
-
+main {
+  padding: 1rem;
 }
 </style>
