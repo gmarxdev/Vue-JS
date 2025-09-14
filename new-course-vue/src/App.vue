@@ -7,14 +7,22 @@ import Header from './components/Header.vue'
     <Header />
 
     <main>
-        <!-- ✅ This is where your pages (Login.vue, Register.vue) will be shown -->
+      <div class="page-container">
         <RouterView />
+      </div>
     </main>
   </div>
 </template>
 
 <style scoped>
 main {
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 500px; /* Prevents forms from being too wide */
 }
 </style>
