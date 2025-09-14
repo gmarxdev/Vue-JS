@@ -66,7 +66,7 @@ const handleRegister = () => {
     padding: 2rem;
     background: var(--color-background);
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
