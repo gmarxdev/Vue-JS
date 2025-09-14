@@ -33,11 +33,23 @@ a {
 }
 
 /* Remove button default */
+/* Global button style */
 button {
-  all: unset;
+  display: inline-flex;           /* Flexbox for centering text/content */
+  justify-content: center;        /* Horizontal center */
+  align-items: center;            /* Vertical center */
+  
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  display: inline-block;
+  width: 100%; /* Makes form buttons stretch full width */
+  transition: background 0.3s ease;
 }
+
 
 /* Remove default list styles */
 ul, ol {
