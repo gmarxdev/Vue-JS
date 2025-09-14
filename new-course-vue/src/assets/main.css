@@ -1,9 +1,9 @@
 @import './base.css';
 
 #app {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
 }
 
 /* Global button style */

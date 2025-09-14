@@ -25,13 +25,16 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 const email = ref("");
 const password = ref("");
+const router = useRouter();
 
 const handleLogin = () => {
     console.log("Login submitted:", { email: email.value, password: password.value });
     alert("Login successful!");
+    router.push('./dashboard');
 };
 </script>
 
