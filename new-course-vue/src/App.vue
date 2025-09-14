@@ -1,6 +1,6 @@
 <script setup>
 
-import NavBar from './components/NavBar.vue'
+import TopBar from './components/TopBar.vue'
 
 import { useRoute } from "vue-router";
 const route = useRoute();
@@ -9,7 +9,7 @@ const route = useRoute();
 
 <template>
   <div>
-    <NavBar v-if="route.path !== '/login' && route.path !== '/register'" />
+    <TopBar v-if="route.path !== '/login' && route.path !== '/register'" />
 
     <main>
       <div class="page-container">
