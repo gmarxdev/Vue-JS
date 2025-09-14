@@ -1,10 +1,15 @@
 <script setup>
+
 import NavBar from './components/NavBar.vue'
+
+import { useRoute } from "vue-router";
+const route = useRoute();
+
 </script>
 
 <template>
   <div>
-    <NavBar />
+    <NavBar v-if="route.path !== '/login' && route.path !== '/register'" />
 
     <main>
       <div class="page-container">
