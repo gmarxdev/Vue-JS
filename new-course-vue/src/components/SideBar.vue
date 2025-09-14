@@ -2,14 +2,14 @@
     <aside :class="['sidebar', { open: isOpen }]">
         <!-- Logo / Title -->
         <div class="sidebar-header">
-            <h2 class="logo">DormSys</h2>
+        <h2 class="logo">DormSys</h2>
 
-            <!-- Hamburger (Only visible on mobile) -->
-            <button class="hamburger" @click="toggleSidebar">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <!-- Hamburger (Only visible on mobile) -->
+        <button class="hamburger" @click="toggleSidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         </div>
 
         <!-- Navigation -->
