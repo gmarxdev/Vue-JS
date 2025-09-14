@@ -2,13 +2,11 @@
     <header class="navbar">
         <div class="logo">MyApp</div>
 
-        <!-- Desktop Navigation -->
-        <nav class="nav-links" :class="{ open: isOpen }">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
+            <!-- Desktop Navigation -->
+            <nav class="nav-links" :class="{ open: isOpen }">
+                <RouterLink to="/login">Login</RouterLink>
+                <RouterLink to="/register">Register</RouterLink>
+            </nav>
 
         <!-- Hamburger Button (for mobile) -->
         <button class="hamburger" @click="toggleMenu" aria-label="Menu">
