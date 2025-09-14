@@ -11,10 +11,10 @@
         </nav>
 
         <!-- Hamburger Button (for mobile) -->
-        <button class="hamburger" @click="toggleMenu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <button class="hamburger" @click="toggleMenu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
     </header>
 </template>
@@ -42,9 +42,16 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 1.5rem;
-    background-color: #2c3e50;
+    background-color: var(--vt-c-indigo);
     color: white;
-    position: relative;
+
+    /* Full-width fixed navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 1000;
 }
 
 .logo {
@@ -56,6 +63,10 @@ export default {
 .nav-links {
     display: flex;
     gap: 1.5rem;
+
+    /* For animation (applies only on mobile when hidden) */
+    max-height: none;
+    transition: max-height 0.3s ease;
 }
 
 .nav-links a {
@@ -95,13 +106,15 @@ export default {
         right: 0;
         flex-direction: column;
         background: #34495e;
-        padding: 1rem 0;
         text-align: center;
-        display: none;
+
+        /* Hide by default */
+        max-height: 0;
+        overflow: hidden;
     }
 
     .nav-links.open {
-        display: flex;
+        max-height: 300px; /* smooth slide down */
     }
 
     .hamburger {
