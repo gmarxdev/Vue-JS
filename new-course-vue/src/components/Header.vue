@@ -1,74 +1,111 @@
 <template>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown link
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <header class="navbar">
+        <div class="logo">MyApp</div>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-links" :class="{ open: isOpen }">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
         </nav>
+
+        <!-- Hamburger Button (for mobile) -->
+        <button class="hamburger" @click="toggleMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
     </header>
 </template>
 
 <script>
 export default {
-    name: 'Header'
-}
+    name: "Header",
+    data() {
+        return {
+        isOpen: false, // Tracks mobile menu state
+        };
+    },
+    methods: {
+        toggleMenu() {
+        this.isOpen = !this.isOpen;
+        },
+    },
+};
 </script>
 
 <style scoped>
-header {
-    background: #2c3e50;
-    color: #fff;
-}
+/* ===== Base Navbar Styles ===== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #2c3e50;
+    color: white;
+    position: relative;
 }
-.logo h1 {
-    margin: 0;
+
+.logo {
     font-size: 1.5rem;
+    font-weight: bold;
 }
+
+/* ===== Desktop Links ===== */
 .nav-links {
-    list-style: none;
     display: flex;
     gap: 1.5rem;
-    margin: 0;
-    padding: 0;
 }
+
 .nav-links a {
-    color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    color: white;
+    transition: color 0.3s;
 }
+
 .nav-links a:hover {
-    color: #42b983;
+    color: #1abc9c;
+}
+
+/* ===== Hamburger Button ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #34495e;
+        padding: 1rem 0;
+        text-align: center;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
 </style>
