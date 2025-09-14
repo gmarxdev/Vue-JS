@@ -1,12 +1,12 @@
 <script setup>
 // import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/TheWelcome.vue'
+import Header from './components/Header.vue'
 </script>
 
 <template>
   <div>
-    <header class="nav">
-    </header>
+    <Header/>
 
     <main>
       
