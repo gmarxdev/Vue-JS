@@ -2,11 +2,11 @@
     <header class="navbar">
         <div class="logo">MyApp</div>
 
-            <!-- Desktop Navigation -->
-            <nav class="nav-links" :class="{ open: isOpen }">
-                <RouterLink to="/login">Login</RouterLink>
-                <RouterLink to="/register">Register</RouterLink>
-            </nav>
+        <!-- Desktop Navigation -->
+        <nav class="nav-links" :class="{ open: isOpen }">
+            <RouterLink to="/login">Login</RouterLink>
+            <RouterLink to="/register">Register</RouterLink>
+        </nav>
 
         <!-- Hamburger Button (for mobile) -->
         <button class="hamburger" @click="toggleMenu" aria-label="Menu">
@@ -19,36 +19,35 @@
 
 <script>
 export default {
-    name: "Header",
+    name: "NavBar",
     data() {
         return {
-        isOpen: false, // Tracks mobile menu state
+        isOpen: false,
         };
     },
     methods: {
         toggleMenu() {
-        this.isOpen = !this.isOpen;
+            this.isOpen = !this.isOpen;
         },
     },
 };
 </script>
 
 <style scoped>
-/* ===== Base Navbar Styles ===== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 1.5rem;
-    background-color: var(--vt-c-indigo);
-    color: white;
+    background-color: var(--color-primary); /* ✅ Use your red theme color */
+    color: var(--color-text-light);
 
     /* Full-width fixed navbar */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -57,27 +56,23 @@ export default {
     font-weight: bold;
 }
 
-/* ===== Desktop Links ===== */
 .nav-links {
     display: flex;
     gap: 1.5rem;
-
-    /* For animation (applies only on mobile when hidden) */
     max-height: none;
     transition: max-height 0.3s ease;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+    color: var(--color-text-light);
+    font-weight: 600;
 }
 
 .nav-links a:hover {
-    color: #1abc9c;
+    color: var(--color-background);
 }
 
-/* ===== Hamburger Button ===== */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -90,12 +85,11 @@ export default {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: white;
+    background: var(--color-text-light);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
-/* ===== Mobile Styles ===== */
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
@@ -103,16 +97,14 @@ export default {
         left: 0;
         right: 0;
         flex-direction: column;
-        background: #34495e;
+        background: var(--color-primary-dark);
         text-align: center;
-
-        /* Hide by default */
         max-height: 0;
         overflow: hidden;
     }
 
     .nav-links.open {
-        max-height: 300px; /* smooth slide down */
+        max-height: 300px;
     }
 
     .hamburger {
