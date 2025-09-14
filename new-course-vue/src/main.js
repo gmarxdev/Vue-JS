@@ -8,7 +8,7 @@ import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 
 const routes = [
-    { path: '/', redirect: '/login' },
+    { path: '/', redirect: '/dashboard' },
     { path: '/login', component: Login },
     { path: '/register', component: Register },
 ]
