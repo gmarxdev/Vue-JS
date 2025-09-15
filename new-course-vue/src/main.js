@@ -7,7 +7,7 @@ import App from './App.vue'
 import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import Dashboard from './views/Dashboard.vue'
-import Rooms from './views/Dashboard.vue'
+import Rooms from './views/Rooms.vue'
 
 const routes = [
     { path: '/', redirect: '/dashboard' },
