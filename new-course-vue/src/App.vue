@@ -6,7 +6,7 @@ import SideBar from "./components/SideBar.vue";
 const route = useRoute();
 
 function getPageTitle(path) {
-  if (path.includes("/students")) return "Students";
+  if (path.includes("/renters")) return "Renters";
   if (path.includes("/rooms")) return "Rooms";
   if (path.includes("/payments")) return "Payments";
   if (path.includes("/settings")) return "Settings";

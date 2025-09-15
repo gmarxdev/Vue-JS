@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li><RouterLink to="/dashboard" @click="closeSidebar">Dashboard</RouterLink></li>
-                <li><RouterLink to="/students" @click="closeSidebar">Students</RouterLink></li>
+                <li><RouterLink to="/renters" @click="closeSidebar">Renters</RouterLink></li>
                 <li><RouterLink to="/rooms" @click="closeSidebar">Rooms</RouterLink></li>
                 <li><RouterLink to="/payments" @click="closeSidebar">Payments</RouterLink></li>
                 <li><RouterLink to="/settings" @click="closeSidebar">Settings</RouterLink></li>
